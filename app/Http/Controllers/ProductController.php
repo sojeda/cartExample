@@ -16,8 +16,6 @@ class ProductController extends Controller
 
     public function addCart(Request $request)
     {    	    	
-    	$request->session()->flush();
-
     	$request->session()->push('cart.products', [
     		'id' => $request->product_id,
     		'stock' => $request->stock,
