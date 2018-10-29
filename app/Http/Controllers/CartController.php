@@ -8,6 +8,9 @@ class CartController extends Controller
 {
     public function index()
     {
-    	# code...
+        $products = session('cart.products');
+        
+        return view('cart')->with('products', $products);
+
     }
 }
