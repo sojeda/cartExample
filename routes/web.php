@@ -24,3 +24,5 @@ Route::get('/productos', 'ProductController@index')->name('produtcs.index');
 Route::post('/productos/agregar', 'ProductController@addCart')->name('produtcs.addCart');
 
 Route::get('/carrito', 'CartController@index')->name('cart.index');
+
+
