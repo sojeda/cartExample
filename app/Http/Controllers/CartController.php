@@ -19,6 +19,5 @@ class CartController extends Controller
         }
    
         return view('cart')->with('products', $products);
-
     }
 }
