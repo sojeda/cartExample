@@ -16,6 +16,13 @@ class ProductController extends Controller
 
     public function addCart(Request $request)
     {    	    	
-    	return Product::find($request->product_id);
+    	$request->session()->flush();
+
+    	$request->session()->push('cart.products', [
+    		'id' => $request->product_id,
+    		'stock' => $request->stock,
+    	]);
+
+    	return redirect()->back();
     }
 }

@@ -20,7 +20,7 @@
                             <form action="{{ route('produtcs.addCart') }}" method="post">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                <input type="number" name="number">
+                                <input type="stock" name="stock">
                                 <input type="submit" name="submit" value="Agregar al Carrito">
                             </form>                            
                         </li>
