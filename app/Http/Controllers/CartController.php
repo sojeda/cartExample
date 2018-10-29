@@ -9,8 +9,8 @@ class CartController extends Controller
 {
     public function index()
     {
-        $session_products = session('cart.products');
         $products = [];
+        $session_products = session('cart.products', $products);
 
         foreach ($session_products as $key => $value) {
             $product = Product::find($session_products[$key]['id']);
