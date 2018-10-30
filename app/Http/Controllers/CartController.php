@@ -33,4 +33,9 @@ class CartController extends Controller
         
         return redirect()->back();
     }
+
+    public function removeAll(Request $request){
+        $request->session()->flush();
+        return redirect()->back();
+    }
 }

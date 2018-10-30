@@ -25,4 +25,7 @@ Route::post('/productos/agregar', 'ProductController@addCart')->name('produtcs.a
 
 Route::get('/carrito', 'CartController@index')->name('cart.index');
 
+
 Route::get('/carrito/{id}/quitar', 'CartController@remove')->name('cart.remove');
+Route::get('/carrito/quitartodo', 'CartController@removeAll')->name('cart.removeAll');
+
