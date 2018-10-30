@@ -37,7 +37,7 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
                         <td class="col-sm-1 col-md-1">
                         <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
+                            <a href="{{ route('car.remove', $product->id) }}" class="glyphicon glyphicon-remove"></a> Remove
                         </button></td>
                     </tr>
                     <tr>
