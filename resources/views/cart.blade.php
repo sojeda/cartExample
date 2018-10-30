@@ -5,8 +5,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-@extends('layouts.app')
-@section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -44,9 +43,7 @@
                             <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
                             <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
                             <td class="col-sm-1 col-md-1">
-                                <button type="button" class="btn btn-danger">
-                                    <span class="glyphicon glyphicon-remove"></span> Remove
-                                </button>
+                                <a href="{{ route('cart.remove', $product->id) }}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Remove</a>                                
                             </td>
                         </tr>
                     @endforeach
