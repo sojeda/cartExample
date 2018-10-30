@@ -5,7 +5,8 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -60,6 +61,18 @@
                             <span class="glyphicon glyphicon-remove"></span> Remove
                         </button></td>
                     </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                    <td class="col-md-1" style="text-align: right">
+                    <a href="{{route('cart.removeAll')}}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Remove All</a>
+      
+
+                    </td>
+                    </tr>
+
                     <tr>
                         <td>   </td>
                         <td>   </td>
